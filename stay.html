@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accommodation Guidance | SchengenEase</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="site-header"></div>
+  <div class="page-header"><div class="container">
+    <p class="breadcrumb"><a href="index.html">Home</a> / Stay</p>
+    <h1>Accommodation guidance</h1>
+    <p>Hotel &amp; apartment shortlists for visa proof — ₹499</p>
+  </div></div>
+  <section>
+    <div class="container" style="max-width:720px;">
+      <form id="stay-form" class="checkout-form">
+        <div id="stay-form-msg"></div>
+        <div class="form-row">
+          <div class="form-group"><label for="stay-form-name">Name *</label><input type="text" id="stay-form-name" required></div>
+          <div class="form-group"><label for="stay-form-phone">Phone *</label><input type="tel" id="stay-form-phone" required></div>
+        </div>
+        <div class="form-group"><label for="stay-form-email">Email *</label><input type="email" id="stay-form-email" required></div>
+        <div class="form-group"><label for="stay-form-cities">Cities &amp; nights *</label><textarea id="stay-form-cities" rows="2" required placeholder="Paris 3N, Rome 2N..."></textarea></div>
+        <div class="form-row">
+          <div class="form-group"><label for="stay-form-checkin">Check-in *</label><input type="date" id="stay-form-checkin" required></div>
+          <div class="form-group"><label for="stay-form-checkout">Check-out *</label><input type="date" id="stay-form-checkout" required></div>
+        </div>
+        <div class="form-group"><label for="stay-form-room">Room type</label><select id="stay-form-room"><option>Double room</option><option>Twin</option><option>Family room</option><option>Apartment</option></select></div>
+        <div class="form-group"><label for="stay-form-budget">Budget per night (EUR)</label><input type="text" id="stay-form-budget" placeholder="80-120"></div>
+        <button type="submit" class="btn btn-primary">Request stay options</button>
+      </form>
+    </div>
+  </section>
+  <div id="site-footer"></div>
+  <script src="js/config.js"></script>
+  <script src="js/packages.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/checkout.js"></script>
+  <script>submitAssistForm('stay-form', 'stay', ['cities', 'checkin', 'checkout', 'room', 'budget']);</script>
+</body>
+</html>

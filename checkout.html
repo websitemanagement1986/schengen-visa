@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | SchengenEase</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="site-header"></div>
+  <div class="page-header"><div class="container"><h1>Checkout</h1><p>Pay consultancy fee — embassy charges are separate</p></div></div>
+  <section>
+    <div class="container checkout-grid">
+      <div class="checkout-form">
+        <h2>Your details</h2>
+        <div id="checkout-errors"></div>
+        <div class="form-group"><label for="name">Full name *</label><input type="text" id="name" required></div>
+        <div class="form-group"><label for="email">Email *</label><input type="email" id="email" required></div>
+        <div class="form-group"><label for="phone">Mobile *</label><input type="tel" id="phone" required placeholder="10-digit number"></div>
+        <div class="form-group"><label for="city">City</label><input type="text" id="city" placeholder="For consulate jurisdiction"></div>
+        <div class="form-group"><label for="notes">Notes</label><textarea id="notes" rows="2" placeholder="Travel dates, main Schengen country, etc."></textarea></div>
+
+        <h2 style="margin-top:24px;">Select services</h2>
+        <div id="checkout-packages"></div>
+
+        <h2 style="margin-top:24px;">Payment</h2>
+        <div class="payment-methods">
+          <label class="payment-option"><input type="radio" name="payment" value="pay_later" checked><span>Pay later — UPI/bank details by email</span></label>
+          <label class="payment-option"><input type="radio" name="payment" value="upi"><span>Pay now — UPI via PayMate</span></label>
+        </div>
+        <p class="disclaimer">SchengenEase does not guarantee visa approval. We are not affiliated with any embassy or VFS.</p>
+        <p style="font-size:0.85rem;margin-bottom:16px;">By continuing you agree to our <a href="terms.html">Terms</a> and <a href="privacy.html">Privacy Policy</a>.</p>
+        <button id="pay-btn" class="btn btn-primary btn-lg" style="width:100%;">Submit</button>
+      </div>
+      <div id="checkout-summary" class="checkout-summary"></div>
+    </div>
+  </section>
+  <div id="site-footer"></div>
+  <script src="js/config.js"></script>
+  <script src="js/packages.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>

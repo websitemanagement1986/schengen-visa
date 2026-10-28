@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flight Booking Guidance | SchengenEase</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="site-header"></div>
+  <div class="page-header"><div class="container">
+    <p class="breadcrumb"><a href="index.html">Home</a> / Flights</p>
+    <h1>Flight booking guidance</h1>
+    <p>Shortlisted routes &amp; fares — ₹499 assisted service</p>
+  </div></div>
+  <section>
+    <div class="container" style="max-width:720px;">
+      <form id="tickets-form" class="checkout-form">
+        <div id="tickets-form-msg"></div>
+        <div class="form-row">
+          <div class="form-group"><label for="tickets-form-name">Name *</label><input type="text" id="tickets-form-name" required></div>
+          <div class="form-group"><label for="tickets-form-phone">Phone *</label><input type="tel" id="tickets-form-phone" required></div>
+        </div>
+        <div class="form-group"><label for="tickets-form-email">Email *</label><input type="email" id="tickets-form-email" required></div>
+        <div class="form-group"><label for="tickets-form-origin">Departure city in India *</label><input type="text" id="tickets-form-origin" required placeholder="Delhi, Mumbai..."></div>
+        <div class="form-row">
+          <div class="form-group"><label for="tickets-form-entry">Schengen entry city *</label><input type="text" id="tickets-form-entry" required></div>
+          <div class="form-group"><label for="tickets-form-exit">Return from (Schengen or open jaw)</label><input type="text" id="tickets-form-exit"></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label for="tickets-form-depart">Outbound date *</label><input type="date" id="tickets-form-depart" required></div>
+          <div class="form-group"><label for="tickets-form-return">Return date</label><input type="date" id="tickets-form-return"></div>
+        </div>
+        <div class="form-group"><label for="tickets-form-pax">Passengers *</label><input type="text" id="tickets-form-pax" required placeholder="2 adults"></div>
+        <div class="form-group"><label for="tickets-form-class">Cabin class</label><select id="tickets-form-class"><option>Economy</option><option>Premium economy</option><option>Business</option></select></div>
+        <button type="submit" class="btn btn-primary">Request flight options</button>
+      </form>
+    </div>
+  </section>
+  <div id="site-footer"></div>
+  <script src="js/config.js"></script>
+  <script src="js/packages.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/checkout.js"></script>
+  <script>submitAssistForm('tickets-form', 'tickets', ['origin', 'entry', 'exit', 'depart', 'return', 'pax', 'class']);</script>
+</body>
+</html>

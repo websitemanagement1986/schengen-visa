@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Europe Itinerary Planning | SchengenEase</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div id="site-header"></div>
+  <div class="page-header"><div class="container">
+    <p class="breadcrumb"><a href="index.html">Home</a> / Itinerary</p>
+    <h1>Europe itinerary planning</h1>
+    <p>Assisted day-by-day routes — ₹999 · typical delivery in 3 working days</p>
+  </div></div>
+  <section>
+    <div class="container" style="max-width:720px;">
+      <p style="color:var(--text-muted);margin-bottom:24px;">Tell us where you want to go. We email a tailored itinerary with transport tips and realistic pacing — you book tickets and hotels yourself or use our flight/stay guidance add-ons.</p>
+      <form id="itinerary-form" class="checkout-form">
+        <div id="itinerary-form-msg"></div>
+        <div class="form-row">
+          <div class="form-group"><label for="itinerary-form-name">Name *</label><input type="text" id="itinerary-form-name" required></div>
+          <div class="form-group"><label for="itinerary-form-phone">Phone *</label><input type="tel" id="itinerary-form-phone" required></div>
+        </div>
+        <div class="form-group"><label for="itinerary-form-email">Email *</label><input type="email" id="itinerary-form-email" required></div>
+        <div class="form-group"><label for="itinerary-form-cities">Cities you want to visit *</label><textarea id="itinerary-form-cities" rows="2" required placeholder="Paris, Amsterdam, Rome..."></textarea></div>
+        <div class="form-row">
+          <div class="form-group"><label for="itinerary-form-days">Total trip days *</label><input type="number" id="itinerary-form-days" min="3" max="90" required></div>
+          <div class="form-group"><label for="itinerary-form-month">Travel month</label><input type="text" id="itinerary-form-month" placeholder="June 2026"></div>
+        </div>
+        <div class="form-group"><label for="itinerary-form-budget">Budget level</label><select id="itinerary-form-budget"><option>Economy</option><option>Mid-range</option><option>Premium</option></select></div>
+        <div class="form-group"><label for="itinerary-form-travelers">Travelers</label><input type="text" id="itinerary-form-travelers" placeholder="2 adults, 1 child"></div>
+        <div class="form-group"><label for="itinerary-form-interests">Interests</label><textarea id="itinerary-form-interests" rows="2" placeholder="Museums, nature, food, nightlife..."></textarea></div>
+        <button type="submit" class="btn btn-primary">Submit itinerary request</button>
+        <p style="margin-top:12px;font-size:0.85rem;"><a href="checkout.html">Paid itinerary package (₹999)</a> includes priority handling.</p>
+      </form>
+    </div>
+  </section>
+  <div id="site-footer"></div>
+  <script src="js/config.js"></script>
+  <script src="js/packages.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/checkout.js"></script>
+  <script>submitAssistForm('itinerary-form', 'itinerary', ['cities', 'days', 'month', 'budget', 'travelers', 'interests']);</script>
+</body>
+</html>
